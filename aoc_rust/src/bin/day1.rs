@@ -1,5 +1,5 @@
 fn main() {
-    let input: &str = include_str!("./input.txt");
+    let input = std::fs::read_to_string("./src/bin/input.txt").unwrap();
     let lines = input.split("\n\n");
     let mut lines_parsed: Vec<u32> = lines
         .map(|line| {
